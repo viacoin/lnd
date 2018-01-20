@@ -14,7 +14,7 @@ import (
 	"time"
 
 	"github.com/lightninglabs/neutrino"
-	"github.com/lightningnetwork/lnd/chainntnfs"
+	"github.com/viacoin/lnd/chainntnfs"
 	"github.com/viacoin/viad/btcjson"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcwallet/walletdb"
@@ -29,15 +29,15 @@ import (
 
 	// Required to auto-register the bitcoind backed ChainNotifier
 	// implementation.
-	_ "github.com/lightningnetwork/lnd/chainntnfs/bitcoindnotify"
+	_ "github.com/viacoin/lnd/chainntnfs/bitcoindnotify"
 
 	// Required to auto-register the btcd backed ChainNotifier
 	// implementation.
-	_ "github.com/lightningnetwork/lnd/chainntnfs/btcdnotify"
+	_ "github.com/viacoin/lnd/chainntnfs/btcdnotify"
 
 	// Required to auto-register the neutrino backed ChainNotifier
 	// implementation.
-	_ "github.com/lightningnetwork/lnd/chainntnfs/neutrinonotify"
+	_ "github.com/viacoin/lnd/chainntnfs/neutrinonotify"
 
 	// Required to register the boltdb walletdb implementation.
 	_ "github.com/roasbeef/btcwallet/walletdb/bdb"

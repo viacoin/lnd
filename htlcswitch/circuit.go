@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/go-errors/errors"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 // PaymentCircuit is used by the HTLC switch subsystem to determine the

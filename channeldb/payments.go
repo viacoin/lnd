@@ -6,7 +6,7 @@ import (
 	"io"
 
 	"github.com/boltdb/bolt"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 var (

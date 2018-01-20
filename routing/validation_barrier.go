@@ -3,8 +3,8 @@ package routing
 import (
 	"sync"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 // ValidationBarrier is a barrier used to ensure proper validation order while

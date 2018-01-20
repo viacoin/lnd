@@ -1,7 +1,7 @@
 # Installation
 
 ### Preliminaries
-  In order to work with [`lnd`](https://github.com/lightningnetwork/lnd), the
+  In order to work with [`lnd`](https://github.com/viacoin/lnd), the
   following build dependencies are required:
   
   * **Go:** `lnd` is written in Go. To install, run one of the following commands:
@@ -51,8 +51,8 @@
 With the preliminary steps completed, to install `lnd`, `lncli`, and all
 related dependencies run the following commands:
 ```
-git clone https://github.com/lightningnetwork/lnd $GOPATH/src/github.com/lightningnetwork/lnd
-cd $GOPATH/src/github.com/lightningnetwork/lnd
+git clone https://github.com/viacoin/lnd $GOPATH/src/github.com/viacoin/lnd
+cd $GOPATH/src/github.com/viacoin/lnd
 glide install
 go install . ./cmd/...
 ```
@@ -62,7 +62,7 @@ go install . ./cmd/...
 To update your version of `lnd` to the latest version run the following 
 commands:
 ```
-cd $GOPATH/src/github.com/lightningnetwork/lnd
+cd $GOPATH/src/github.com/viacoin/lnd
 git pull && glide install
 go install . ./cmd/...
 ```
@@ -232,4 +232,4 @@ and node type you're using.
 # Accurate as of:
 - _roasbeef/btcd commit:_ `f8c02aff4e7a807ba0c1349e2db03695d8e790e8` 
 - _roasbeef/btcutil commit:_ `a259eaf2ec1b54653cdd67848a41867f280797ee` 
-- _lightningnetwork/lnd commit:_ `08de2becf8d77fae192205172c4fb17bb09bd0dbf49e64aa323b2fcbf9fe2a35`
+- _viacoin/lnd commit:_ `08de2becf8d77fae192205172c4fb17bb09bd0dbf49e64aa323b2fcbf9fe2a35`

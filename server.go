@@ -14,13 +14,13 @@ import (
 
 	"github.com/boltdb/bolt"
 	"github.com/lightningnetwork/lightning-onion"
-	"github.com/lightningnetwork/lnd/autopilot"
-	"github.com/lightningnetwork/lnd/brontide"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/discovery"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing"
+	"github.com/viacoin/lnd/autopilot"
+	"github.com/viacoin/lnd/brontide"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/discovery"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/routing"
 	"github.com/roasbeef/btcd/blockchain"
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
@@ -29,7 +29,7 @@ import (
 	"github.com/roasbeef/btcutil"
 
 	"github.com/go-errors/errors"
-	"github.com/lightningnetwork/lnd/htlcswitch"
+	"github.com/viacoin/lnd/htlcswitch"
 )
 
 var (

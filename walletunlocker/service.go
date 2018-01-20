@@ -3,8 +3,8 @@ package walletunlocker
 import (
 	"fmt"
 
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnwallet/btcwallet"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/lnwallet/btcwallet"
 	"github.com/roasbeef/btcd/chaincfg"
 	"github.com/roasbeef/btcwallet/wallet"
 	"golang.org/x/net/context"
