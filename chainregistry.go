@@ -47,8 +47,8 @@ const (
 	// bitcoinChain is Bitcoin's testnet chain.
 	bitcoinChain chainCode = iota
 
-	// litecoinChain is Litecoin's testnet chain.
-	litecoinChain
+	// ViacoinChain is Viacoin's testnet chain.
+	viacoinChain
 )
 
 // String returns a string representation of the target chainCode.
@@ -56,8 +56,8 @@ func (c chainCode) String() string {
 	switch c {
 	case bitcoinChain:
 		return "bitcoin"
-	case litecoinChain:
-		return "litecoin"
+	case viacoinChain:
+		return "viacoin"
 	default:
 		return "kekcoin"
 	}
@@ -94,8 +94,8 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 	// Set the RPC config from the "home" chain. Multi-chain isn't yet
 	// active, so we'll restrict usage to a particular chain for now.
 	homeChainConfig := cfg.Bitcoin
-	if registeredChains.PrimaryChain() == litecoinChain {
-		homeChainConfig = cfg.Litecoin
+	if registeredChains.PrimaryChain() == viacoinChain {
+		homeChainConfig = cfg.Viacoin
 	}
 	ltndLog.Infof("Primary chain is set to: %v",
 		registeredChains.PrimaryChain())
@@ -113,12 +113,12 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 		cc.feeEstimator = lnwallet.StaticFeeEstimator{
 			FeeRate: 50,
 		}
-	case litecoinChain:
+	case viacoinChain:
 		cc.routingPolicy = htlcswitch.ForwardingPolicy{
-			MinHTLC:       cfg.Litecoin.MinHTLC,
-			BaseFee:       cfg.Litecoin.BaseFee,
-			FeeRate:       cfg.Litecoin.FeeRate,
-			TimeLockDelta: cfg.Litecoin.TimeLockDelta,
+			MinHTLC:       cfg.Viacoin.MinHTLC,
+			BaseFee:       cfg.Viacoin.BaseFee,
+			FeeRate:       cfg.Viacoin.FeeRate,
+			TimeLockDelta: cfg.Viacoin.TimeLockDelta,
 		}
 		cc.feeEstimator = lnwallet.StaticFeeEstimator{
 			FeeRate: 100,
@@ -196,7 +196,7 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 		}
 	case "bitcoind":
 		// Otherwise, we'll be speaking directly via RPC and ZMQ to a
-		// bitcoind node. If the specified host for the btcd/ltcd RPC
+		// bitcoind node. If the specified host for the btcd/viad RPC
 		// server already has a port specified, then we use that
 		// directly. Otherwise, we assume the default port according to
 		// the selected chain parameters.
@@ -290,7 +290,7 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 	case "btcd":
 		// Otherwise, we'll be speaking directly via RPC to a node.
 		//
-		// So first we'll load btcd/ltcd's TLS cert for the RPC
+		// So first we'll load btcd/viad's TLS cert for the RPC
 		// connection. If a raw cert was specified in the config, then
 		// we'll set that directly. Otherwise, we attempt to read the
 		// cert from the path specified in the config.
@@ -298,8 +298,8 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 		switch {
 		case cfg.Bitcoin.Active:
 			btcdMode = cfg.BtcdMode
-		case cfg.Litecoin.Active:
-			btcdMode = cfg.LtcdMode
+		case cfg.Viacoin.Active:
+			btcdMode = cfg.ViadMode
 		}
 		var rpcCert []byte
 		if btcdMode.RawRPCCert != "" {
@@ -321,7 +321,7 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 			}
 		}
 
-		// If the specified host for the btcd/ltcd RPC server already
+		// If the specified host for the btcd/viad RPC server already
 		// has a port specified, then we use that directly. Otherwise,
 		// we assume the default port according to the selected chain
 		// parameters.
@@ -371,8 +371,8 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 
 		// If we're not in simnet or regtest mode, then we'll attempt
 		// to use a proper fee estimator for testnet.
-		if !cfg.Bitcoin.SimNet && !cfg.Litecoin.SimNet &&
-			!cfg.Bitcoin.RegTest && !cfg.Litecoin.RegTest {
+		if !cfg.Bitcoin.SimNet && !cfg.Viacoin.SimNet &&
+			!cfg.Bitcoin.RegTest && !cfg.Viacoin.RegTest {
 
 			ltndLog.Infof("Initializing btcd backed fee estimator")
 
@@ -479,26 +479,26 @@ var (
 		0x01, 0xea, 0x33, 0x09, 0x00, 0x00, 0x00, 0x00,
 	})
 
-	// litecoinGenesis is the genesis hash of Litecoin's testnet4 chain.
-	litecoinGenesis = chainhash.Hash([chainhash.HashSize]byte{
-		0xa0, 0x29, 0x3e, 0x4e, 0xeb, 0x3d, 0xa6, 0xe6,
-		0xf5, 0x6f, 0x81, 0xed, 0x59, 0x5f, 0x57, 0x88,
-		0x0d, 0x1a, 0x21, 0x56, 0x9e, 0x13, 0xee, 0xfd,
-		0xd9, 0x51, 0x28, 0x4b, 0x5a, 0x62, 0x66, 0x49,
+	// litecoinGenesis is the genesis hash of Viacoin's testnet4 chain.
+	viacoinGenesis = chainhash.Hash([chainhash.HashSize]byte{
+		0x43, 0x49, 0x7f, 0xd7, 0xf8, 0x26, 0x95, 0x71,
+		0x08, 0xf4, 0xa3, 0x0f, 0xd9, 0xce, 0xc3, 0xae,
+		0xba, 0x79, 0x97, 0x20, 0x84, 0xe9, 0x0e, 0xad,
+		0x01, 0xea, 0x33, 0x09, 0x00, 0x00, 0x00, 0x00,
 	})
 
 	// chainMap is a simple index that maps a chain's genesis hash to the
 	// chainCode enum for that chain.
 	chainMap = map[chainhash.Hash]chainCode{
 		bitcoinGenesis:  bitcoinChain,
-		litecoinGenesis: litecoinChain,
+		viacoinGenesis: viacoinChain,
 	}
 
 	// reverseChainMap is the inverse of the chainMap above: it maps the
 	// chain enum for a chain to its genesis hash.
 	reverseChainMap = map[chainCode]chainhash.Hash{
 		bitcoinChain:  bitcoinGenesis,
-		litecoinChain: litecoinGenesis,
+		viacoinChain: viacoinGenesis,
 	}
 
 	// chainDNSSeeds is a map of a chain's hash to the set of DNS seeds
