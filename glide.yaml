@@ -1,4 +1,4 @@
-package: github.com/lightningnetwork/lnd
+package: github.com/viacoin/lnd
 import:
 - package: github.com/boltdb/bolt
   version: ^1.2.1
@@ -67,8 +67,8 @@ import:
 - package: google.golang.org/genproto
   subpackages:
   - googleapis/api/annotations
-- package: github.com/ltcsuite/ltcd
-  version: 5f654d5faab99ee2b3488fabba98e5f7a5257ee3
+- package: github.com/viacoin/viad
+  version: a37add7df239fe89ad45630c4249977ddf0764a9
   subpackages:
   - chaincfg
 - package: github.com/lightninglabs/neutrino
