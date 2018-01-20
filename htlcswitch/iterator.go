@@ -29,7 +29,7 @@ func (c NetworkHop) String() string {
 	switch c {
 	case BitcoinHop:
 		return "Bitcoin"
-	case LitecoinHop:
+	case ViacoinHop:
 		return "Viacoin"
 	default:
 		return "Kekcoin"
