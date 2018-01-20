@@ -40,10 +40,10 @@ var bitcoinSimNetParams = bitcoinNetParams{
 	rpcPort: "18556",
 }
 
-// liteTestNetParams contains parameters specific to the 4th version of the
+// viaTestNetParams contains parameters specific to the 4th version of the
 // test network.
-var viaTestNetParams = litecoinNetParams{
-	Params:  &litecoinCfg.TestNet4Params,
+var viaTestNetParams = viacoinNetParams{
+	Params:  &viacoinCfg.TestNet3Params,
 	rpcPort: "19224",
 }
 
@@ -53,42 +53,42 @@ var regTestNetParams = bitcoinNetParams{
 	rpcPort: "18334",
 }
 
-// applyLitecoinParams applies the relevant chain configuration parameters that
-// differ for litecoin to the chain parameters typed for btcsuite derivation.
+// applyViacoinParams applies the relevant chain configuration parameters that
+// differ for viacoin to the chain parameters typed for btcsuite derivation.
 // This function is used in place of using something like interface{} to
 // abstract over _which_ chain (or fork) the parameters are for.
-func applyLitecoinParams(params *bitcoinNetParams) {
-	params.Name = liteTestNetParams.Name
-	params.Net = wire.BitcoinNet(liteTestNetParams.Net)
-	params.DefaultPort = liteTestNetParams.DefaultPort
-	params.CoinbaseMaturity = liteTestNetParams.CoinbaseMaturity
+func applyViacoinParams(params *bitcoinNetParams) {
+	params.Name = viaTestNetParams.Name
+	params.Net = wire.BitcoinNet(viaTestNetParams.Net)
+	params.DefaultPort = viaTestNetParams.DefaultPort
+	params.CoinbaseMaturity = viaTestNetParams.CoinbaseMaturity
 
-	copy(params.GenesisHash[:], liteTestNetParams.GenesisHash[:])
+	copy(params.GenesisHash[:], viaTestNetParams.GenesisHash[:])
 
 	// Address encoding magics
-	params.PubKeyHashAddrID = liteTestNetParams.PubKeyHashAddrID
-	params.ScriptHashAddrID = liteTestNetParams.ScriptHashAddrID
-	params.PrivateKeyID = liteTestNetParams.PrivateKeyID
-	params.WitnessPubKeyHashAddrID = liteTestNetParams.WitnessPubKeyHashAddrID
-	params.WitnessScriptHashAddrID = liteTestNetParams.WitnessScriptHashAddrID
-	params.Bech32HRPSegwit = liteTestNetParams.Bech32HRPSegwit
+	params.PubKeyHashAddrID = viaTestNetParams.PubKeyHashAddrID
+	params.ScriptHashAddrID = viaTestNetParams.ScriptHashAddrID
+	params.PrivateKeyID = viaTestNetParams.PrivateKeyID
+	params.WitnessPubKeyHashAddrID = viaTestNetParams.WitnessPubKeyHashAddrID
+	params.WitnessScriptHashAddrID = viaTestNetParams.WitnessScriptHashAddrID
+	params.Bech32HRPSegwit = viaTestNetParams.Bech32HRPSegwit
 
-	copy(params.HDPrivateKeyID[:], liteTestNetParams.HDPrivateKeyID[:])
-	copy(params.HDPublicKeyID[:], liteTestNetParams.HDPublicKeyID[:])
+	copy(params.HDPrivateKeyID[:], viaTestNetParams.HDPrivateKeyID[:])
+	copy(params.HDPublicKeyID[:], viaTestNetParams.HDPublicKeyID[:])
 
-	params.HDCoinType = liteTestNetParams.HDCoinType
+	params.HDCoinType = viaTestNetParams.HDCoinType
 
-	checkPoints := make([]chaincfg.Checkpoint, len(liteTestNetParams.Checkpoints))
-	for i := 0; i < len(liteTestNetParams.Checkpoints); i++ {
+	checkPoints := make([]chaincfg.Checkpoint, len(viaTestNetParams.Checkpoints))
+	for i := 0; i < len(viaTestNetParams.Checkpoints); i++ {
 		var chainHash chainhash.Hash
-		copy(chainHash[:], liteTestNetParams.Checkpoints[i].Hash[:])
+		copy(chainHash[:], viaTestNetParams.Checkpoints[i].Hash[:])
 
 		checkPoints[i] = chaincfg.Checkpoint{
-			Height: liteTestNetParams.Checkpoints[i].Height,
+			Height: viaTestNetParams.Checkpoints[i].Height,
 			Hash:   &chainHash,
 		}
 	}
 	params.Checkpoints = checkPoints
 
-	params.rpcPort = liteTestNetParams.rpcPort
+	params.rpcPort = viaTestNetParams.rpcPort
 }
