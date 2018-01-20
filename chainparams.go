@@ -1,7 +1,7 @@
 package main
 
 import (
-	litecoinCfg "github.com/ltcsuite/ltcd/chaincfg"
+	viacoinCfg "github.com/viacoin/viad/chaincfg"
 	"github.com/roasbeef/btcd/chaincfg"
 	bitcoinCfg "github.com/roasbeef/btcd/chaincfg"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
@@ -19,10 +19,10 @@ type bitcoinNetParams struct {
 	rpcPort string
 }
 
-// litecoinNetParams couples the p2p parameters of a network with the
+// viacoinNetParams couples the p2p parameters of a network with the
 // corresponding RPC port of a daemon running on the particular network.
-type litecoinNetParams struct {
-	*litecoinCfg.Params
+type viacoinNetParams struct {
+	*viacoinCfg.Params
 	rpcPort string
 }
 
@@ -42,9 +42,9 @@ var bitcoinSimNetParams = bitcoinNetParams{
 
 // liteTestNetParams contains parameters specific to the 4th version of the
 // test network.
-var liteTestNetParams = litecoinNetParams{
+var viaTestNetParams = litecoinNetParams{
 	Params:  &litecoinCfg.TestNet4Params,
-	rpcPort: "19334",
+	rpcPort: "19224",
 }
 
 // regTestNetParams contains parameters specific to a local regtest network.
