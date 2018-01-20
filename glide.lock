@@ -76,8 +76,8 @@ imports:
   - headerfs
 - name: github.com/lightningnetwork/lightning-onion
   version: 18bf6612a0653a21daf1a08b4a59e54670a524a1
-- name: github.com/ltcsuite/ltcd
-  version: 5f654d5faab99ee2b3488fabba98e5f7a5257ee3
+- name: github.com/viacoin/viad
+  version: a37add7df239fe89ad45630c4249977ddf0764a9
   subpackages:
   - chaincfg
   - chaincfg/chainhash
