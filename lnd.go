@@ -692,7 +692,7 @@ func waitForWalletPassword(grpcEndpoint, restEndpoint string,
 	grpcServer := grpc.NewServer(serverOpts...)
 
 	chainConfig := cfg.Bitcoin
-	if registeredChains.PrimaryChain() == litecoinChain {
+	if registeredChains.PrimaryChain() == viacoinChain {
 		chainConfig = cfg.Litecoin
 	}
 	pwService := walletunlocker.New(macaroonService,
