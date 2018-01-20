@@ -15,7 +15,7 @@ import (
 
 	"github.com/lightninglabs/neutrino"
 	"github.com/lightningnetwork/lnd/chainntnfs"
-	"github.com/ltcsuite/ltcd/btcjson"
+	"github.com/viacoin/viad/btcjson"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcwallet/walletdb"
 
