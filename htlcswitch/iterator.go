@@ -19,9 +19,9 @@ const (
 	// link with the specified short channel ID.
 	BitcoinHop NetworkHop = iota
 
-	// LitecoinHop denotes that an HTLC is to be forwarded along the
-	// Litecoin link with the specified short channel ID.
-	LitecoinHop
+	// ViacoinHop denotes that an HTLC is to be forwarded along the
+	// Viacoin link with the specified short channel ID.
+	ViacoinHop
 )
 
 // String returns the string representation of the target NetworkHop.
@@ -30,7 +30,7 @@ func (c NetworkHop) String() string {
 	case BitcoinHop:
 		return "Bitcoin"
 	case LitecoinHop:
-		return "Litecoin"
+		return "Viacoin"
 	default:
 		return "Kekcoin"
 	}
