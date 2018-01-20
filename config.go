@@ -51,10 +51,10 @@ const (
 	defaultBitcoinFeeRate       = 1
 	defaultBitcoinTimeLockDelta = 144
 
-	defaultLitecoinMinHTLCMSat   = 1000
-	defaultLitecoinBaseFeeMSat   = 1000
-	defaultLitecoinFeeRate       = 1
-	defaultLitecoinTimeLockDelta = 576
+	defaultViacoinMinHTLCMSat   = 1000
+	defaultViacoinBaseFeeMSat   = 1000
+	defaultViacoinFeeRate       = 1
+	defaultViacoinTimeLockDelta = 576
 )
 
 var (
@@ -71,8 +71,8 @@ var (
 	btcdHomeDir            = btcutil.AppDataDir("btcd", false)
 	defaultBtcdRPCCertFile = filepath.Join(btcdHomeDir, "rpc.cert")
 
-	ltcdHomeDir            = btcutil.AppDataDir("ltcd", false)
-	defaultLtcdRPCCertFile = filepath.Join(ltcdHomeDir, "rpc.cert")
+	viadHomeDir            = btcutil.AppDataDir("viad", false)
+	defaultLtcdRPCCertFile = filepath.Join(viadHomeDir, "rpc.cert")
 
 	bitcoindHomeDir = btcutil.AppDataDir("bitcoin", false)
 )
@@ -162,8 +162,8 @@ type config struct {
 	BitcoindMode *bitcoindConfig `group:"bitcoind" namespace:"bitcoind"`
 	NeutrinoMode *neutrinoConfig `group:"neutrino" namespace:"neutrino"`
 
-	Litecoin *chainConfig `group:"Litecoin" namespace:"litecoin"`
-	LtcdMode *btcdConfig  `group:"ltcd" namespace:"ltcd"`
+	Viacoin *chainConfig `group:"Viacoin" namespace:"litecoin"`
+	LtcdMode *btcdConfig  `group:"viad" namespace:"viad"`
 
 	Autopilot *autoPilotConfig `group:"autopilot" namespace:"autopilot"`
 
@@ -209,11 +209,11 @@ func loadConfig() (*config, error) {
 		BitcoindMode: &bitcoindConfig{
 			RPCHost: defaultRPCHost,
 		},
-		Litecoin: &chainConfig{
-			MinHTLC:       defaultLitecoinMinHTLCMSat,
-			BaseFee:       defaultLitecoinBaseFeeMSat,
-			FeeRate:       defaultLitecoinFeeRate,
-			TimeLockDelta: defaultLitecoinTimeLockDelta,
+		Viacoin: &chainConfig{
+			MinHTLC:       defaultViacoinMinHTLCMSat,
+			BaseFee:       defaultViacoinBaseFeeMSat,
+			FeeRate:       defaultViacoinFeeRate,
+			TimeLockDelta: defaultViacoinTimeLockDelta,
 			Node:          "btcd",
 		},
 		LtcdMode: &btcdConfig{
@@ -279,30 +279,30 @@ func loadConfig() (*config, error) {
 
 	switch {
 	// At this moment, multiple active chains are not supported.
-	case cfg.Litecoin.Active && cfg.Bitcoin.Active:
-		str := "%s: Currently both Bitcoin and Litecoin cannot be " +
+	case cfg.Viacoin.Active && cfg.Bitcoin.Active:
+		str := "%s: Currently both Bitcoin and Viacoin cannot be " +
 			"active together"
 		return nil, fmt.Errorf(str, funcName)
 
-	// Either Bitcoin must be active, or Litecoin must be active.
+	// Either Bitcoin must be active, or Viacoin must be active.
 	// Otherwise, we don't know which chain we're on.
-	case !cfg.Bitcoin.Active && !cfg.Litecoin.Active:
+	case !cfg.Bitcoin.Active && !cfg.Viacoin.Active:
 		return nil, fmt.Errorf("%s: either bitcoin.active or "+
 			"litecoin.active must be set to 1 (true)", funcName)
 
-	case cfg.Litecoin.Active:
-		if cfg.Litecoin.SimNet {
+	case cfg.Viacoin.Active:
+		if cfg.Viacoin.SimNet {
 			str := "%s: simnet mode for litecoin not currently supported"
 			return nil, fmt.Errorf(str, funcName)
 		}
 
-		if cfg.Litecoin.TimeLockDelta < minTimeLockDelta {
+		if cfg.Viacoin.TimeLockDelta < minTimeLockDelta {
 			return nil, fmt.Errorf("timelockdelta must be at least %v",
 				minTimeLockDelta)
 		}
 
-		if cfg.Litecoin.Node != "btcd" {
-			str := "%s: only ltcd (`btcd`) mode supported for litecoin at this time"
+		if cfg.Viacoin.Node != "btcd" {
+			str := "%s: only viad (`btcd`) mode supported for litecoin at this time"
 			return nil, fmt.Errorf(str, funcName)
 		}
 
@@ -311,17 +311,17 @@ func loadConfig() (*config, error) {
 		// temporary hack, we'll mutate the default net params for
 		// bitcoin with the litecoin specific information.
 		paramCopy := bitcoinTestNetParams
-		applyLitecoinParams(&paramCopy)
+		applyViacoinParams(&paramCopy)
 		activeNetParams = paramCopy
 
-		err := parseRPCParams(cfg.Litecoin, cfg.LtcdMode, litecoinChain,
+		err := parseRPCParams(cfg.Viacoin, cfg.LtcdMode, litecoinChain,
 			funcName)
 		if err != nil {
 			err := fmt.Errorf("unable to load RPC credentials for "+
-				"ltcd: %v", err)
+				"viad: %v", err)
 			return nil, err
 		}
-		cfg.Litecoin.ChainDir = filepath.Join(cfg.DataDir, litecoinChain.String())
+		cfg.Viacoin.ChainDir = filepath.Join(cfg.DataDir, litecoinChain.String())
 
 		// Finally we'll register the litecoin chain as our current
 		// primary chain.
@@ -610,11 +610,11 @@ func parseRPCParams(cConfig *chainConfig, nodeConfig interface{}, net chainCode,
 	case litecoinChain:
 		switch cConfig.Node {
 		case "btcd":
-			daemonName = "ltcd"
-			homeDir = ltcdHomeDir
-			confFile = "ltcd"
+			daemonName = "viad"
+			homeDir = viadHomeDir
+			confFile = "viad"
 		case "bitcoind":
-			return fmt.Errorf("bitcoind mode doesn't work with Litecoin yet")
+			return fmt.Errorf("bitcoind mode doesn't work with Viacoin yet")
 		}
 	}
 
