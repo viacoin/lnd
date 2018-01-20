@@ -309,7 +309,7 @@ func lndMain() error {
 			// in the case this gets re-orged out, and
 			// we will require more confirmations before
 			// we consider it open.
-			// TODO(halseth): Use Litecoin params in case
+			// TODO(halseth): Use Viacoin params in case
 			// of LTC channels.
 
 			// In case the user has explicitly specified
@@ -343,7 +343,7 @@ func lndMain() error {
 			// close) linearly from minRemoteDelay blocks
 			// for small channels, to maxRemoteDelay blocks
 			// for channels of size maxFundingAmount.
-			// TODO(halseth): Litecoin parameter for LTC.
+			// TODO(halseth): Viacoin parameter for LTC.
 
 			// In case the user has explicitly specified
 			// a default value for the remote delay, we
@@ -420,7 +420,7 @@ func lndMain() error {
 	// continue the start up of the remainder of the daemon. This ensures
 	// that we don't accept any possibly invalid state transitions, or
 	// accept channels with spent funds.
-	if !(cfg.Bitcoin.SimNet || cfg.Litecoin.SimNet) {
+	if !(cfg.Bitcoin.SimNet || cfg.Viacoin.SimNet) {
 		_, bestHeight, err := activeChainControl.chainIO.GetBestBlock()
 		if err != nil {
 			return err
@@ -693,7 +693,7 @@ func waitForWalletPassword(grpcEndpoint, restEndpoint string,
 
 	chainConfig := cfg.Bitcoin
 	if registeredChains.PrimaryChain() == viacoinChain {
-		chainConfig = cfg.Litecoin
+		chainConfig = cfg.Viacoin
 	}
 	pwService := walletunlocker.New(macaroonService,
 		chainConfig.ChainDir, activeNetParams.Params)
