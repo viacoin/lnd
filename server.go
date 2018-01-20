@@ -427,8 +427,8 @@ func (s *server) Start() error {
 	// If network bootstrapping hasn't been disabled, then we'll configure
 	// the set of active bootstrappers, and launch a dedicated goroutine to
 	// maintain a set of persistent connections.
-	if !cfg.NoNetBootstrap && !(cfg.Bitcoin.SimNet || cfg.Litecoin.SimNet) &&
-		!(cfg.Bitcoin.RegTest || cfg.Litecoin.RegTest) {
+	if !cfg.NoNetBootstrap && !(cfg.Bitcoin.SimNet || cfg.Viacoin.SimNet) &&
+		!(cfg.Bitcoin.RegTest || cfg.Viacoin.RegTest) {
 		networkBootStrappers, err := initNetworkBootstrappers(s)
 		if err != nil {
 			return err
@@ -509,7 +509,7 @@ func initNetworkBootstrappers(s *server) ([]discovery.NetworkPeerBootstrapper, e
 
 	// If this isn't simnet mode, then one of our additional bootstrapping
 	// sources will be the set of running DNS seeds.
-	if !cfg.Bitcoin.SimNet || !cfg.Litecoin.SimNet {
+	if !cfg.Bitcoin.SimNet || !cfg.Viacoin.SimNet {
 		dnsSeeds, ok := chainDNSSeeds[*activeNetParams.GenesisHash]
 
 		// If we have a set of DNS seeds for this chain, then we'll add
