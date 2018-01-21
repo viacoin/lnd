@@ -5,9 +5,9 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/go-errors/errors"
-	"github.com/viacoin/lnd/lnwire"
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 // ValidateChannelAnn validates the channel announcement message and checks

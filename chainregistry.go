@@ -13,6 +13,11 @@ import (
 	"time"
 
 	"github.com/lightninglabs/neutrino"
+	"github.com/roasbeef/btcd/chaincfg/chainhash"
+	"github.com/roasbeef/btcd/rpcclient"
+	"github.com/roasbeef/btcutil"
+	"github.com/roasbeef/btcwallet/chain"
+	"github.com/roasbeef/btcwallet/walletdb"
 	"github.com/viacoin/lnd/chainntnfs"
 	"github.com/viacoin/lnd/chainntnfs/bitcoindnotify"
 	"github.com/viacoin/lnd/chainntnfs/btcdnotify"
@@ -22,11 +27,6 @@ import (
 	"github.com/viacoin/lnd/lnwallet"
 	"github.com/viacoin/lnd/lnwallet/btcwallet"
 	"github.com/viacoin/lnd/routing/chainview"
-	"github.com/roasbeef/btcd/chaincfg/chainhash"
-	"github.com/roasbeef/btcd/rpcclient"
-	"github.com/roasbeef/btcutil"
-	"github.com/roasbeef/btcwallet/chain"
-	"github.com/roasbeef/btcwallet/walletdb"
 )
 
 // defaultChannelConstraints is the default set of channel constraints that are
@@ -490,14 +490,14 @@ var (
 	// chainMap is a simple index that maps a chain's genesis hash to the
 	// chainCode enum for that chain.
 	chainMap = map[chainhash.Hash]chainCode{
-		bitcoinGenesis:  bitcoinChain,
+		bitcoinGenesis: bitcoinChain,
 		viacoinGenesis: viacoinChain,
 	}
 
 	// reverseChainMap is the inverse of the chainMap above: it maps the
 	// chain enum for a chain to its genesis hash.
 	reverseChainMap = map[chainCode]chainhash.Hash{
-		bitcoinChain:  bitcoinGenesis,
+		bitcoinChain: bitcoinGenesis,
 		viacoinChain: viacoinGenesis,
 	}
 

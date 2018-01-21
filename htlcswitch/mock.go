@@ -14,15 +14,15 @@ import (
 
 	"github.com/btcsuite/fastsha256"
 	"github.com/go-errors/errors"
-	"github.com/viacoin/lnd/chainntnfs"
-	"github.com/viacoin/lnd/channeldb"
-	"github.com/viacoin/lnd/lnwallet"
-	"github.com/viacoin/lnd/lnwire"
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcd/txscript"
 	"github.com/roasbeef/btcd/wire"
 	"github.com/roasbeef/btcutil"
+	"github.com/viacoin/lnd/chainntnfs"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/lnwallet"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 type mockFeeEstimator struct {

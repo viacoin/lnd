@@ -3,10 +3,10 @@ package walletunlocker
 import (
 	"fmt"
 
-	"github.com/viacoin/lnd/lnrpc"
-	"github.com/viacoin/lnd/lnwallet/btcwallet"
 	"github.com/roasbeef/btcd/chaincfg"
 	"github.com/roasbeef/btcwallet/wallet"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/lnwallet/btcwallet"
 	"golang.org/x/net/context"
 	"gopkg.in/macaroon-bakery.v1/bakery"
 )

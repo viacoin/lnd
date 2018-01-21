@@ -5,16 +5,16 @@ import (
 	"time"
 
 	"github.com/btcsuite/btclog"
+	"github.com/roasbeef/btcd/btcec"
+	"github.com/roasbeef/btcd/txscript"
+	"github.com/roasbeef/btcd/wire"
+	"github.com/roasbeef/btcutil"
 	"github.com/viacoin/lnd/chainntnfs"
 	"github.com/viacoin/lnd/channeldb"
 	"github.com/viacoin/lnd/htlcswitch"
 	"github.com/viacoin/lnd/lnrpc"
 	"github.com/viacoin/lnd/lnwallet"
 	"github.com/viacoin/lnd/lnwire"
-	"github.com/roasbeef/btcd/btcec"
-	"github.com/roasbeef/btcd/txscript"
-	"github.com/roasbeef/btcd/wire"
-	"github.com/roasbeef/btcutil"
 )
 
 func init() {

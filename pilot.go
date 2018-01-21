@@ -5,11 +5,11 @@ import (
 	"net"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/viacoin/lnd/autopilot"
-	"github.com/viacoin/lnd/lnwire"
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcd/wire"
 	"github.com/roasbeef/btcutil"
+	"github.com/viacoin/lnd/autopilot"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 // chanController is an implementation of the autopilot.ChannelController

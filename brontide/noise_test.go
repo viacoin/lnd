@@ -9,8 +9,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/viacoin/lnd/lnwire"
 	"github.com/roasbeef/btcd/btcec"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 func establishTestConnection() (net.Conn, net.Conn, func(), error) {

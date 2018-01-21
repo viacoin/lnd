@@ -11,11 +11,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/viacoin/lnd/lnwire"
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcd/chaincfg"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcutil"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 var (

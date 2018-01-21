@@ -10,15 +10,15 @@ import (
 
 	"github.com/boltdb/bolt"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/viacoin/lnd/chainntnfs"
-	"github.com/viacoin/lnd/channeldb"
-	"github.com/viacoin/lnd/htlcswitch"
-	"github.com/viacoin/lnd/lnwallet"
 	"github.com/roasbeef/btcd/blockchain"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcd/txscript"
 	"github.com/roasbeef/btcd/wire"
 	"github.com/roasbeef/btcutil"
+	"github.com/viacoin/lnd/chainntnfs"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/htlcswitch"
+	"github.com/viacoin/lnd/lnwallet"
 )
 
 var (

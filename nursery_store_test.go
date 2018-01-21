@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btclog"
-	"github.com/viacoin/lnd/channeldb"
 	"github.com/roasbeef/btcd/wire"
+	"github.com/viacoin/lnd/channeldb"
 )
 
 func init() {

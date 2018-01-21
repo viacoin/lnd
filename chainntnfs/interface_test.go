@@ -14,10 +14,10 @@ import (
 	"time"
 
 	"github.com/lightninglabs/neutrino"
-	"github.com/viacoin/lnd/chainntnfs"
-	"github.com/viacoin/viad/btcjson"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcwallet/walletdb"
+	"github.com/viacoin/lnd/chainntnfs"
+	"github.com/viacoin/viad/btcjson"
 
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcd/chaincfg"

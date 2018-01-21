@@ -2,10 +2,10 @@ package discovery
 
 import (
 	"github.com/go-errors/errors"
+	"github.com/roasbeef/btcd/btcec"
 	"github.com/viacoin/lnd/channeldb"
 	"github.com/viacoin/lnd/lnwallet"
 	"github.com/viacoin/lnd/lnwire"
-	"github.com/roasbeef/btcd/btcec"
 )
 
 // createChanAnnouncement is a helper function which creates all channel

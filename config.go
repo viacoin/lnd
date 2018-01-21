@@ -18,10 +18,10 @@ import (
 	"time"
 
 	flags "github.com/jessevdk/go-flags"
-	"github.com/viacoin/lnd/brontide"
-	"github.com/viacoin/lnd/lnwire"
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcutil"
+	"github.com/viacoin/lnd/brontide"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 const (
@@ -162,7 +162,7 @@ type config struct {
 	BitcoindMode *bitcoindConfig `group:"bitcoind" namespace:"bitcoind"`
 	NeutrinoMode *neutrinoConfig `group:"neutrino" namespace:"neutrino"`
 
-	Viacoin *chainConfig `group:"Viacoin" namespace:"viacoin"`
+	Viacoin  *chainConfig `group:"Viacoin" namespace:"viacoin"`
 	ViadMode *btcdConfig  `group:"viad" namespace:"viad"`
 
 	Autopilot *autoPilotConfig `group:"autopilot" namespace:"autopilot"`

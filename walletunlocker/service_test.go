@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/roasbeef/btcd/chaincfg"
+	"github.com/roasbeef/btcwallet/wallet"
 	"github.com/viacoin/lnd/lnrpc"
 	"github.com/viacoin/lnd/lnwallet/btcwallet"
 	"github.com/viacoin/lnd/walletunlocker"
-	"github.com/roasbeef/btcd/chaincfg"
-	"github.com/roasbeef/btcwallet/wallet"
 	"golang.org/x/net/context"
 )
 

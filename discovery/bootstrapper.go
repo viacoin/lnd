@@ -10,11 +10,11 @@ import (
 	"strings"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/viacoin/lnd/autopilot"
-	"github.com/viacoin/lnd/lnwire"
 	"github.com/miekg/dns"
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcutil/bech32"
+	"github.com/viacoin/lnd/autopilot"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 // NetworkPeerBootstrapper is an interface that represents an initial peer

@@ -3,8 +3,8 @@ package btcwallet
 import (
 	"fmt"
 
-	"github.com/viacoin/lnd/lnwallet"
 	"github.com/roasbeef/btcwallet/chain"
+	"github.com/viacoin/lnd/lnwallet"
 )
 
 const (

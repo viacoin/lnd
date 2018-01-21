@@ -9,11 +9,11 @@ import (
 
 	"github.com/boltdb/bolt"
 	"github.com/lightningnetwork/lightning-onion"
-	"github.com/viacoin/lnd/channeldb"
-	"github.com/viacoin/lnd/lnwire"
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcutil"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 const (

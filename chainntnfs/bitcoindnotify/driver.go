@@ -3,9 +3,9 @@ package bitcoindnotify
 import (
 	"fmt"
 
-	"github.com/viacoin/lnd/chainntnfs"
 	"github.com/roasbeef/btcd/chaincfg"
 	"github.com/roasbeef/btcd/rpcclient"
+	"github.com/viacoin/lnd/chainntnfs"
 )
 
 // createNewNotifier creates a new instance of the ChainNotifier interface

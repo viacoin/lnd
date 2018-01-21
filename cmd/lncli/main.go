@@ -13,10 +13,10 @@ import (
 
 	"gopkg.in/macaroon.v1"
 
-	"github.com/viacoin/lnd/lnrpc"
-	"github.com/viacoin/lnd/macaroons"
 	"github.com/roasbeef/btcutil"
 	"github.com/urfave/cli"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/macaroons"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"

@@ -3,12 +3,12 @@ package lnwallet_test
 import (
 	"testing"
 
-	"github.com/viacoin/lnd/lnwallet"
 	"github.com/roasbeef/btcd/blockchain"
 	"github.com/roasbeef/btcd/chaincfg"
 	"github.com/roasbeef/btcd/txscript"
 	"github.com/roasbeef/btcd/wire"
 	"github.com/roasbeef/btcutil"
+	"github.com/viacoin/lnd/lnwallet"
 )
 
 // TestTxWeightEstimator tests that transaction weight estimates are calculated

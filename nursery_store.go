@@ -6,9 +6,9 @@ import (
 	"fmt"
 
 	"github.com/boltdb/bolt"
-	"github.com/viacoin/lnd/channeldb"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcd/wire"
+	"github.com/viacoin/lnd/channeldb"
 )
 
 //	              Overview of Nursery Store Storage Hierarchy

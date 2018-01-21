@@ -33,6 +33,8 @@ import (
 
 	proxy "github.com/grpc-ecosystem/grpc-gateway/runtime"
 	flags "github.com/jessevdk/go-flags"
+	"github.com/roasbeef/btcd/btcec"
+	"github.com/roasbeef/btcutil"
 	"github.com/viacoin/lnd/autopilot"
 	"github.com/viacoin/lnd/channeldb"
 	"github.com/viacoin/lnd/lnrpc"
@@ -40,8 +42,6 @@ import (
 	"github.com/viacoin/lnd/lnwire"
 	"github.com/viacoin/lnd/macaroons"
 	"github.com/viacoin/lnd/walletunlocker"
-	"github.com/roasbeef/btcd/btcec"
-	"github.com/roasbeef/btcutil"
 )
 
 const (

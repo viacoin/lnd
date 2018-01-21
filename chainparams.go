@@ -1,11 +1,11 @@
 package main
 
 import (
-	viacoinCfg "github.com/viacoin/viad/chaincfg"
 	"github.com/roasbeef/btcd/chaincfg"
 	bitcoinCfg "github.com/roasbeef/btcd/chaincfg"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcd/wire"
+	viacoinCfg "github.com/viacoin/viad/chaincfg"
 )
 
 // activeNetParams is a pointer to the parameters specific to the currently

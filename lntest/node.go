@@ -21,12 +21,12 @@ import (
 	macaroon "gopkg.in/macaroon.v1"
 
 	"github.com/go-errors/errors"
-	"github.com/viacoin/lnd/lnrpc"
-	"github.com/viacoin/lnd/macaroons"
 	"github.com/roasbeef/btcd/chaincfg"
 	"github.com/roasbeef/btcd/chaincfg/chainhash"
 	"github.com/roasbeef/btcd/rpcclient"
 	"github.com/roasbeef/btcd/wire"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/macaroons"
 )
 
 var (

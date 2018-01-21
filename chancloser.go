@@ -5,14 +5,14 @@ import (
 	"strings"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/viacoin/lnd/channeldb"
-	"github.com/viacoin/lnd/htlcswitch"
-	"github.com/viacoin/lnd/lnwallet"
-	"github.com/viacoin/lnd/lnwire"
 	"github.com/roasbeef/btcd/btcec"
 	"github.com/roasbeef/btcd/txscript"
 	"github.com/roasbeef/btcd/wire"
 	"github.com/roasbeef/btcutil"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/htlcswitch"
+	"github.com/viacoin/lnd/lnwallet"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 var (
