@@ -6,8 +6,8 @@ import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	bitcoinWire "github.com/btcsuite/btcd/wire"
 	"github.com/lightningnetwork/lnd/keychain"
-	litecoinCfg "github.com/ltcsuite/ltcd/chaincfg"
-	litecoinWire "github.com/ltcsuite/ltcd/wire"
+	litecoinCfg "github.com/viacoin/viad/chaincfg"
+	litecoinWire "github.com/viacoin/viad/wire"
 )
 
 // activeNetParams is a pointer to the parameters specific to the currently
@@ -57,8 +57,8 @@ var bitcoinSimNetParams = bitcoinNetParams{
 // litecoinTestNetParams contains parameters specific to the 4th version of the
 // test network.
 var litecoinTestNetParams = litecoinNetParams{
-	Params:   &litecoinCfg.TestNet4Params,
-	rpcPort:  "19334",
+	Params:   &litecoinCfg.TestNet3Params,
+	rpcPort:  "25222",
 	CoinType: keychain.CoinTypeTestnet,
 }
 
@@ -66,7 +66,7 @@ var litecoinTestNetParams = litecoinNetParams{
 // Litecoin mainnet.
 var litecoinMainNetParams = litecoinNetParams{
 	Params:   &litecoinCfg.MainNetParams,
-	rpcPort:  "9334",
+	rpcPort:  "5222",
 	CoinType: keychain.CoinTypeLitecoin,
 }
 
@@ -122,7 +122,7 @@ func applyLitecoinParams(params *bitcoinNetParams, litecoinParams *litecoinNetPa
 // parameter configuration.
 func isTestnet(params *bitcoinNetParams) bool {
 	switch params.Params.Net {
-	case bitcoinWire.TestNet3, bitcoinWire.BitcoinNet(litecoinWire.TestNet4):
+	case bitcoinWire.TestNet3, bitcoinWire.BitcoinNet(litecoinWire.TestNet3):
 		return true
 	default:
 		return false

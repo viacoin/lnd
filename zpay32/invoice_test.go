@@ -18,7 +18,7 @@ import (
 	"github.com/btcsuite/btcutil"
 	"github.com/lightningnetwork/lnd/lnwire"
 
-	litecoinCfg "github.com/ltcsuite/ltcd/chaincfg"
+	litecoinCfg "github.com/viacoin/viad/chaincfg"
 )
 
 var (
@@ -106,8 +106,8 @@ func init() {
 	// to copies of bitcoin params.
 	// TODO(sangaman): create an interface for chaincfg.params
 	ltcTestNetParams = chaincfg.TestNet3Params
-	ltcTestNetParams.Net = wire.BitcoinNet(litecoinCfg.TestNet4Params.Net)
-	ltcTestNetParams.Bech32HRPSegwit = litecoinCfg.TestNet4Params.Bech32HRPSegwit
+	ltcTestNetParams.Net = wire.BitcoinNet(litecoinCfg.TestNet3Params.Net)
+	ltcTestNetParams.Bech32HRPSegwit = litecoinCfg.TestNet3Params.Bech32HRPSegwit
 	ltcMainNetParams = chaincfg.MainNetParams
 	ltcMainNetParams.Net = wire.BitcoinNet(litecoinCfg.MainNetParams.Net)
 	ltcMainNetParams.Bech32HRPSegwit = litecoinCfg.MainNetParams.Bech32HRPSegwit
