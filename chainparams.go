@@ -58,7 +58,7 @@ var bitcoinSimNetParams = bitcoinNetParams{
 // test network.
 var litecoinTestNetParams = litecoinNetParams{
 	Params:   &litecoinCfg.TestNet3Params,
-	rpcPort:  "25222",
+	rpcPort:  "2524",
 	CoinType: keychain.CoinTypeTestnet,
 }
 
@@ -66,7 +66,7 @@ var litecoinTestNetParams = litecoinNetParams{
 // Litecoin mainnet.
 var litecoinMainNetParams = litecoinNetParams{
 	Params:   &litecoinCfg.MainNetParams,
-	rpcPort:  "5222",
+	rpcPort:  "5224",
 	CoinType: keychain.CoinTypeLitecoin,
 }
 
