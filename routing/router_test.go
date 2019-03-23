@@ -16,10 +16,10 @@ import (
 	"github.com/davecgh/go-spew/spew"
 
 	sphinx "github.com/lightningnetwork/lightning-onion"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/htlcswitch"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/zpay32"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/htlcswitch"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/zpay32"
 )
 
 // defaultNumRoutes is the default value for the maximum number of routes to

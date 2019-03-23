@@ -17,11 +17,11 @@ import (
 	"github.com/coreos/bbolt"
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/lightningnetwork/lnd/chainntnfs"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/htlcswitch"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/lnwallet"
+	"github.com/viacoin/lnd/chainntnfs"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/htlcswitch"
+	"github.com/viacoin/lnd/input"
+	"github.com/viacoin/lnd/lnwallet"
 )
 
 var (

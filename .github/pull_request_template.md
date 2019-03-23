@@ -1,7 +1,7 @@
 #### Pull Request Checklist
 
 - [ ] If this is your first time contributing, we recommend you read the [Code
-  Contribution Guidelines](https://github.com/lightningnetwork/lnd/blob/master/docs/code_contribution_guidelines.md)
+  Contribution Guidelines](https://github.com/viacoin/lnd/blob/master/docs/code_contribution_guidelines.md)
 - [ ] All changes are Go version 1.11 compliant
 - [ ]  The code being submitted is commented according to the
   [Code Documentation and Commenting](#CodeDocumentation) section

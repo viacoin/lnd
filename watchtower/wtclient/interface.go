@@ -4,10 +4,10 @@ import (
 	"net"
 
 	"github.com/btcsuite/btcd/btcec"
-	"github.com/lightningnetwork/lnd/brontide"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
-	"github.com/lightningnetwork/lnd/watchtower/wtserver"
+	"github.com/viacoin/lnd/brontide"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/watchtower/wtdb"
+	"github.com/viacoin/lnd/watchtower/wtserver"
 )
 
 // DB abstracts the required database operations required by the watchtower

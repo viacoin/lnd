@@ -3,7 +3,7 @@ package chainview
 import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/channeldb"
+	"github.com/viacoin/lnd/channeldb"
 )
 
 // FilteredChainView represents a subscription to a certain subset of the

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 // paymentSession is used during an HTLC routings session to prune the local

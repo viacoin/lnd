@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lightningnetwork/lnd/subscribe"
+	"github.com/viacoin/lnd/subscribe"
 )
 
 // TestSubscribe tests that the subscription clients receive the updates sent

@@ -15,11 +15,11 @@ import (
 	macaroon "gopkg.in/macaroon.v2"
 
 	"github.com/btcsuite/btcutil"
-	"github.com/lightningnetwork/lnd/build"
-	"github.com/lightningnetwork/lnd/lncfg"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/macaroons"
 	"github.com/urfave/cli"
+	"github.com/viacoin/lnd/build"
+	"github.com/viacoin/lnd/lncfg"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/macaroons"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"

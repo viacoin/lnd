@@ -4,9 +4,9 @@ import (
 	"errors"
 
 	"github.com/btcsuite/btcd/btcec"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/watchtower/wtpolicy"
+	"github.com/viacoin/lnd/keychain"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/watchtower/wtpolicy"
 )
 
 var (

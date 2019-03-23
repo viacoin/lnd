@@ -5,7 +5,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/lightningnetwork/lnd/queue"
+	"github.com/viacoin/lnd/queue"
 )
 
 // ErrServerShuttingDown is an error returned in case the server is in the

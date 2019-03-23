@@ -7,7 +7,7 @@ import (
 	"fmt"
 
 	"github.com/coreos/bbolt"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 // migrateNodeAndEdgeUpdateIndex is a migration function that will update the

@@ -6,10 +6,10 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/btcec"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/netann"
-	"github.com/lightningnetwork/lnd/routing"
+	"github.com/viacoin/lnd/lnwallet"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/netann"
+	"github.com/viacoin/lnd/routing"
 )
 
 type mockSigner struct {

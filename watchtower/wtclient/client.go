@@ -8,14 +8,14 @@ import (
 
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
-	"github.com/lightningnetwork/lnd/watchtower/wtpolicy"
-	"github.com/lightningnetwork/lnd/watchtower/wtserver"
-	"github.com/lightningnetwork/lnd/watchtower/wtwire"
+	"github.com/viacoin/lnd/input"
+	"github.com/viacoin/lnd/keychain"
+	"github.com/viacoin/lnd/lnwallet"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/watchtower/wtdb"
+	"github.com/viacoin/lnd/watchtower/wtpolicy"
+	"github.com/viacoin/lnd/watchtower/wtserver"
+	"github.com/viacoin/lnd/watchtower/wtwire"
 )
 
 const (

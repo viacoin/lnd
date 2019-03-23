@@ -6,9 +6,9 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btcutil"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/routing"
 	context "golang.org/x/net/context"
 )
 

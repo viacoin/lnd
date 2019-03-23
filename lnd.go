@@ -39,17 +39,17 @@ import (
 	flags "github.com/jessevdk/go-flags"
 	"github.com/lightninglabs/neutrino"
 
-	"github.com/lightningnetwork/lnd/autopilot"
-	"github.com/lightningnetwork/lnd/build"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lncfg"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwallet/btcwallet"
-	"github.com/lightningnetwork/lnd/macaroons"
-	"github.com/lightningnetwork/lnd/signal"
-	"github.com/lightningnetwork/lnd/walletunlocker"
+	"github.com/viacoin/lnd/autopilot"
+	"github.com/viacoin/lnd/build"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/keychain"
+	"github.com/viacoin/lnd/lncfg"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/lnwallet"
+	"github.com/viacoin/lnd/lnwallet/btcwallet"
+	"github.com/viacoin/lnd/macaroons"
+	"github.com/viacoin/lnd/signal"
+	"github.com/viacoin/lnd/walletunlocker"
 )
 
 const (

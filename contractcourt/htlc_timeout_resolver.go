@@ -7,11 +7,11 @@ import (
 
 	"github.com/btcsuite/btcd/wire"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightningnetwork/lnd/chainntnfs"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/viacoin/lnd/chainntnfs"
+	"github.com/viacoin/lnd/input"
+	"github.com/viacoin/lnd/lntypes"
+	"github.com/viacoin/lnd/lnwallet"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 // htlcTimeoutResolver is a ContractResolver that's capable of resolving an

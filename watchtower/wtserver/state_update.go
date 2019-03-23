@@ -3,8 +3,8 @@ package wtserver
 import (
 	"fmt"
 
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
-	"github.com/lightningnetwork/lnd/watchtower/wtwire"
+	"github.com/viacoin/lnd/watchtower/wtdb"
+	"github.com/viacoin/lnd/watchtower/wtwire"
 )
 
 // handleStateUpdates processes a stream of StateUpdate requests from the

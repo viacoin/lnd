@@ -3,7 +3,7 @@ package lnwallet
 import (
 	"github.com/btcsuite/btcutil"
 	"github.com/btcsuite/btcwallet/wallet/txrules"
-	"github.com/lightningnetwork/lnd/input"
+	"github.com/viacoin/lnd/input"
 )
 
 // DefaultDustLimit is used to calculate the dust HTLC amount which will be

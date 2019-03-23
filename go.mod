@@ -1,4 +1,4 @@
-module github.com/lightningnetwork/lnd
+module github.com/viacoin/lnd
 
 require (
 	git.schwanenlied.me/yawning/bsaes.git v0.0.0-20180720073208-c0276d75487e // indirect
@@ -30,8 +30,8 @@ require (
 	github.com/kkdai/bstream v0.0.0-20181106074824-b3251f7901ec
 	github.com/lightninglabs/neutrino v0.0.0-20190321023416-6dac90b98052
 	github.com/lightningnetwork/lightning-onion v0.0.0-20180605012408-ac4d9da8f1d6
-	github.com/lightningnetwork/lnd/queue v1.0.1
-	github.com/lightningnetwork/lnd/ticker v1.0.0
+	github.com/viacoin/lnd/queue v1.0.1
+	github.com/viacoin/lnd/ticker v1.0.0
 	github.com/ltcsuite/ltcd v0.0.0-20190101042124-f37f8bf35796
 	github.com/miekg/dns v0.0.0-20171125082028-79bfde677fa8
 	github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af // indirect
@@ -49,6 +49,6 @@ require (
 	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce // indirect
 )
 
-replace github.com/lightningnetwork/lnd/ticker => ./ticker
+replace github.com/viacoin/lnd/ticker => ./ticker
 
-replace github.com/lightningnetwork/lnd/queue => ./queue
+replace github.com/viacoin/lnd/queue => ./queue

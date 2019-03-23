@@ -9,7 +9,7 @@ import (
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btcutil"
 
-	"github.com/lightningnetwork/lnd/input"
+	"github.com/viacoin/lnd/input"
 )
 
 // TestTxWeightEstimator tests that transaction weight estimates are calculated

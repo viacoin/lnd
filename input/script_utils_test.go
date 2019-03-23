@@ -12,7 +12,7 @@ import (
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btcutil"
-	"github.com/lightningnetwork/lnd/keychain"
+	"github.com/viacoin/lnd/keychain"
 )
 
 // TestRevocationKeyDerivation tests that given a public key, and a revocation

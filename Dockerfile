@@ -9,8 +9,8 @@ RUN apk add --no-cache --update alpine-sdk \
     git \
     make \
     gcc \
-&&  git clone https://github.com/lightningnetwork/lnd /go/src/github.com/lightningnetwork/lnd \
-&&  cd /go/src/github.com/lightningnetwork/lnd \
+&&  git clone https://github.com/viacoin/lnd /go/src/github.com/viacoin/lnd \
+&&  cd /go/src/github.com/viacoin/lnd \
 &&  make \
 &&  make install
 

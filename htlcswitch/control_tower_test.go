@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/btcsuite/fastsha256"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 func genHtlc() (*lnwire.UpdateAddHTLC, error) {

@@ -4,9 +4,9 @@ import (
 	"net"
 	"sync/atomic"
 
-	"github.com/lightningnetwork/lnd/brontide"
-	"github.com/lightningnetwork/lnd/watchtower/lookout"
-	"github.com/lightningnetwork/lnd/watchtower/wtserver"
+	"github.com/viacoin/lnd/brontide"
+	"github.com/viacoin/lnd/watchtower/lookout"
+	"github.com/viacoin/lnd/watchtower/wtserver"
 )
 
 // Standalone encapsulates the server-side functionality required by watchtower

@@ -5,7 +5,7 @@ package watchtower
 import (
 	"time"
 
-	"github.com/lightningnetwork/lnd/lncfg"
+	"github.com/viacoin/lnd/lncfg"
 )
 
 // Conf specifies the watchtower options that can be configured from the command

@@ -10,8 +10,8 @@ import (
 
 	"github.com/btcsuite/btcd/wire"
 	"github.com/coreos/bbolt"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/viacoin/lnd/lntypes"
+	"github.com/viacoin/lnd/lnwire"
 )
 
 var (

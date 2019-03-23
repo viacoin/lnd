@@ -1,8 +1,8 @@
 package wtserver
 
 import (
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
-	"github.com/lightningnetwork/lnd/watchtower/wtwire"
+	"github.com/viacoin/lnd/watchtower/wtdb"
+	"github.com/viacoin/lnd/watchtower/wtwire"
 )
 
 // handleDeleteSession processes a DeleteSession request for a client with given

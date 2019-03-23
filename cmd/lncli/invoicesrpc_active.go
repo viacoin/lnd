@@ -9,8 +9,8 @@ import (
 
 	"strconv"
 
-	"github.com/lightningnetwork/lnd/lnrpc/invoicesrpc"
 	"github.com/urfave/cli"
+	"github.com/viacoin/lnd/lnrpc/invoicesrpc"
 )
 
 // invoicesCommands will return nil for non-invoicesrpc builds.

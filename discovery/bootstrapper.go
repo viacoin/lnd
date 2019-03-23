@@ -15,10 +15,10 @@ import (
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcutil/bech32"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightningnetwork/lnd/autopilot"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/tor"
 	"github.com/miekg/dns"
+	"github.com/viacoin/lnd/autopilot"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/tor"
 )
 
 func init() {

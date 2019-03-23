@@ -1,1 +1,1 @@
-module github.com/lightningnetwork/lnd/ticker
+module github.com/viacoin/lnd/ticker

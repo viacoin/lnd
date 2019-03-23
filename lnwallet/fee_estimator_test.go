@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcutil"
-	"github.com/lightningnetwork/lnd/lnwallet"
+	"github.com/viacoin/lnd/lnwallet"
 )
 
 // TestFeeRateTypes checks that converting fee rates between the

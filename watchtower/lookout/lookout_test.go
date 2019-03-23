@@ -11,11 +11,11 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/chainntnfs"
-	"github.com/lightningnetwork/lnd/watchtower/blob"
-	"github.com/lightningnetwork/lnd/watchtower/lookout"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
-	"github.com/lightningnetwork/lnd/watchtower/wtpolicy"
+	"github.com/viacoin/lnd/chainntnfs"
+	"github.com/viacoin/lnd/watchtower/blob"
+	"github.com/viacoin/lnd/watchtower/lookout"
+	"github.com/viacoin/lnd/watchtower/wtdb"
+	"github.com/viacoin/lnd/watchtower/wtpolicy"
 )
 
 type mockPunisher struct {

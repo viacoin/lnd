@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/lightningnetwork/lnd/input"
+	"github.com/viacoin/lnd/input"
 
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/lnwallet"
+	"github.com/viacoin/lnd/lnwallet"
 )
 
 // commitSweepResolver is a resolver that will attempt to sweep the commitment

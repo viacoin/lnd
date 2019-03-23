@@ -12,10 +12,10 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcutil"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing"
-	"github.com/lightningnetwork/lnd/zpay32"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/routing"
+	"github.com/viacoin/lnd/zpay32"
 	"google.golang.org/grpc"
 	"gopkg.in/macaroon-bakery.v2/bakery"
 )

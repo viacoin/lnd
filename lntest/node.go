@@ -25,8 +25,8 @@ import (
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btcutil"
 	"github.com/go-errors/errors"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/macaroons"
+	"github.com/viacoin/lnd/lnrpc"
+	"github.com/viacoin/lnd/macaroons"
 )
 
 var (

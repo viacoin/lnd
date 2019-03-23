@@ -21,13 +21,13 @@ import (
 
 	"github.com/btcsuite/btcutil"
 	flags "github.com/jessevdk/go-flags"
-	"github.com/lightningnetwork/lnd/build"
-	"github.com/lightningnetwork/lnd/htlcswitch/hodl"
-	"github.com/lightningnetwork/lnd/lncfg"
-	"github.com/lightningnetwork/lnd/lnrpc/signrpc"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing"
-	"github.com/lightningnetwork/lnd/tor"
+	"github.com/viacoin/lnd/build"
+	"github.com/viacoin/lnd/htlcswitch/hodl"
+	"github.com/viacoin/lnd/lncfg"
+	"github.com/viacoin/lnd/lnrpc/signrpc"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/routing"
+	"github.com/viacoin/lnd/tor"
 )
 
 const (

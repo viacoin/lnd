@@ -3,11 +3,11 @@ package main
 import (
 	"sync"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/contractcourt"
-	"github.com/lightningnetwork/lnd/invoices"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwallet"
+	"github.com/viacoin/lnd/channeldb"
+	"github.com/viacoin/lnd/contractcourt"
+	"github.com/viacoin/lnd/invoices"
+	"github.com/viacoin/lnd/lntypes"
+	"github.com/viacoin/lnd/lnwallet"
 )
 
 // preimageSubscriber reprints an active subscription to be notified once the

@@ -15,9 +15,9 @@ import (
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btcutil"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/shachain"
+	"github.com/viacoin/lnd/keychain"
+	"github.com/viacoin/lnd/lnwire"
+	"github.com/viacoin/lnd/shachain"
 )
 
 func TestOpenWithCreate(t *testing.T) {
