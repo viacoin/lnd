@@ -11,7 +11,7 @@
     * [Starting btcd](#starting-btcd)
     * [Running lnd using the btcd backend](#running-lnd-using-the-btcd-backend)
   * [Using Neutrino](#using-neutrino)
-  * [Using bitcoind or litecoind](#using-bitcoind-or-litecoind)
+  * [Using bitcoind or viacoind](#using-bitcoind-or-viacoind)
 * [Macaroons](#macaroons)
 * [Network Reachability](#network-reachability)
 * [Simnet vs. Testnet Development](#simnet-vs-testnet-development)
@@ -289,13 +289,13 @@ lnd --bitcoin.active --bitcoin.testnet --debuglevel=debug --bitcoin.node=neutrin
 ```
 
 
-## Using bitcoind or litecoind
+## Using bitcoind or viacoind
 
-The configuration for bitcoind and litecoind are nearly identical, the
-following steps can be mirrored with loss of generality to enable a litecoind
+The configuration for bitcoind and viacoind are nearly identical, the
+following steps can be mirrored with loss of generality to enable a viacoind
 backend.  Setup will be described in regards to `bitcoind`, but note that `lnd`
-uses a distinct `litecoin.node=litecoind` argument and analogous
-subconfigurations prefixed by `litecoind`. Note that adding `--txindex` is
+uses a distinct `viacoin.node=viacoind` argument and analogous
+subconfigurations prefixed by `viacoind`. Note that adding `--txindex` is
 optional, as it will take longer to sync the node, but then `lnd` will
 generally operate faster as it can hit the index directly, rather than scanning
 blocks or BIP 158 filters for relevant items.
@@ -434,10 +434,10 @@ bitcoin.active=1
 ```
 
 Notice the `[Bitcoin]` section. This section houses the parameters for the
-Bitcoin chain. `lnd` also supports Litecoin testnet4 (but not both BTC and LTC
-at the same time), so when working with Litecoin be sure to set to parameters
-for Litecoin accordingly. See a more detailed sample config file available
+Bitcoin chain. `lnd` also supports viacoin testnet4 (but not both BTC and LTC
+at the same time), so when working with viacoin be sure to set to parameters
+for viacoin accordingly. See a more detailed sample config file available
 [here](https://github.com/viacoin/lnd/blob/master/sample-lnd.conf)
 and explore the other sections for node configuration, including `[Btcd]`,
-`[Bitcoind]`, `[Neutrino]`, `[Ltcd]`, and `[Litecoind]` depending on which
+`[Bitcoind]`, `[Neutrino]`, `[Ltcd]`, and `[Viacoind]` depending on which
 chain and node type you're using.

@@ -5,7 +5,7 @@ import (
 	"io"
 
 	"github.com/btcsuite/btcd/btcec"
-	"github.com/lightningnetwork/lightning-onion"
+	sphinx "github.com/lightningnetwork/lightning-onion"
 	"github.com/viacoin/lnd/lnwire"
 )
 
@@ -31,7 +31,7 @@ func (c NetworkHop) String() string {
 	case BitcoinHop:
 		return "Bitcoin"
 	case LitecoinHop:
-		return "Litecoin"
+		return "Viacoin"
 	default:
 		return "Kekcoin"
 	}

@@ -30,8 +30,8 @@ COPY --from=builder /go/bin/ltcctl /bin/
 COPY --from=builder /go/bin/ltcd /bin/
 COPY --from=builder /go/bin/gencerts /bin/
 
-COPY "start-ltcctl.sh" .
-COPY "start-ltcd.sh" .
+COPY "start-viactl.sh" .
+COPY "start-viad.sh" .
 
 RUN apk add --no-cache \
     bash \

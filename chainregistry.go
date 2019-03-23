@@ -92,7 +92,7 @@ func (c chainCode) String() string {
 	case bitcoinChain:
 		return "bitcoin"
 	case litecoinChain:
-		return "litecoin"
+		return "viacoin"
 	default:
 		return "kekcoin"
 	}
@@ -215,7 +215,7 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 			activeNetParams.Params, neutrinoCS,
 		)
 
-	case "bitcoind", "litecoind":
+	case "bitcoind", "viacoind":
 		var bitcoindMode *bitcoindConfig
 		switch {
 		case cfg.Bitcoin.Active:
@@ -308,7 +308,7 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 				return nil, nil, err
 			}
 		} else if cfg.Litecoin.Active {
-			ltndLog.Infof("Initializing litecoind backed fee estimator")
+			ltndLog.Infof("Initializing viacoind backed fee estimator")
 
 			// Finally, we'll re-initialize the fee estimator, as
 			// if we're using litecoind as a backend, then we can
