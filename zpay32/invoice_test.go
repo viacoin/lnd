@@ -720,7 +720,7 @@ func TestNewInvoice(t *testing.T) {
 					Destination(testPubKey))
 			},
 			valid:          true,
-			encodedInvoice: "lntltc241pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqsnp4q0n326hr8v9zprg8gsvezcch06gfaqqhde2aj730yg0durunfhv66m2eq2fx9uctzkmj30meaghyskkgsd6geap5qg9j2ae444z24a4p8xg3a6g73p8l7d689vtrlgzj0wyx2h6atq8dfty7wmkt4frx9g9sp730h5a",
+			encodedInvoice: "lntvia241pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqsnp4q0n326hr8v9zprg8gsvezcch06gfaqqhde2aj730yg0durunfhv665u59gak8jfn9qkhl4dakudsuemr63hyt93zn498cghzvdus2s979qs6dnjxkxx3pqalg8yhce9vz6gesx62tgaezj70g30lug4rlpcqqkddvrf",
 		},
 		{
 			// Create a litecoin mainnet invoice
@@ -732,7 +732,7 @@ func TestNewInvoice(t *testing.T) {
 					Destination(testPubKey))
 			},
 			valid:          true,
-			encodedInvoice: "lnltc241pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqsnp4q0n326hr8v9zprg8gsvezcch06gfaqqhde2aj730yg0durunfhv66859t2d55efrxdlgqg9hdqskfstdmyssdw4fjc8qdl522ct885pqk7acn2aczh0jeht0xhuhnkmm3h0qsrxedlwm9x86787zzn4qwwwcpjkl3t2",
+			encodedInvoice: "lnvia241pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqsnp4q0n326hr8v9zprg8gsvezcch06gfaqqhde2aj730yg0durunfhv663mlpn997a9wprt3ufwhugfqhzwldqpdeddhjk9emchfrhuav07737rjnqvlpyz92cu2nkhwqntthxszmtrzrkav33zymr0l4n8n3egspwa7jta",
 		},
 	}
 
